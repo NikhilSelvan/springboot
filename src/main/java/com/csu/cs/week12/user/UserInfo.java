@@ -21,20 +21,26 @@ public class UserInfo {
     private String phoneNumber;
     private Boolean isServiceProvider;
 
+
+
+    private String password;
+
     public UserInfo() {
     }
 
-    public UserInfo(Long id, String name, String phoneNumber, Boolean isServiceProvider) {
+    public UserInfo(Long id, String name, String phoneNumber, Boolean isServiceProvider, String password) {
         this.id = id;
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.isServiceProvider = isServiceProvider;
+        this.password = password;
     }
 
-    public UserInfo(String name, String phoneNumber, Boolean isServiceProvider) {
+    public UserInfo(String name, String phoneNumber, Boolean isServiceProvider, String password) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.isServiceProvider = isServiceProvider;
+        this.password = password;
     }
 
     public Long getId() {
@@ -67,6 +73,14 @@ public class UserInfo {
 
     public void setServiceProvider(Boolean serviceProvider) {
         isServiceProvider = serviceProvider;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override

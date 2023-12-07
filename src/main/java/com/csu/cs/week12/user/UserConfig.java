@@ -14,12 +14,14 @@ public class UserConfig {
             UserInfo mariam = new UserInfo(
                     "Mariam",
                     "510-555-5555",
-                    Boolean.TRUE
+                    Boolean.TRUE,
+                    "abc"
             );
             UserInfo alex = new UserInfo(
                     "Alex",
                     "510-555-5535",
-                    Boolean.FALSE
+                    Boolean.FALSE,
+                    "acb"
             );
 
             repository.saveAll(

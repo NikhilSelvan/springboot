@@ -23,6 +23,7 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.0.2'
 }
 
 tasks.named('test') {

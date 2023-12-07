@@ -1,14 +1,14 @@
 package com.csu.cs.week12.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
-@RequestMapping(path = "api/v1/user")
+@RequestMapping()//(path = "api/v1/user")
 public class UserController {
     private final UserService userService;
 
@@ -22,7 +22,14 @@ public class UserController {
         return userService.getUsers();
     }
 
-    public void addNewUser(UserInfo userInfo) {
+    @PostMapping
+    public void addNewUser(@RequestBody UserInfo userInfo) {
         userService.addNewUser(userInfo);
     }
+
+    @DeleteMapping(path = "{userID}")
+    public void deleteUser(@PathVariable("userID") Long userId){
+        userService.deleteUser(userId);
+    }
+
 }
