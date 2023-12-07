@@ -1,4 +1,4 @@
-package com.csu.cs.week12.user;
+package com.csu.cs.week12.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Map;
 
 @Controller
-@RequestMapping()//(path = "api/v1/login/")
+@RequestMapping(path = "api/v1/login/")
 public class LoginRegisterController {
 
     @PostMapping(value = "action_login", params = "login")
