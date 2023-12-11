@@ -1,13 +1,11 @@
 package com.csu.cs.week12.controllers;
 
-import com.csu.cs.week12.user.UserInfo;
-import com.csu.cs.week12.user.UserService;
+import com.csu.cs.week12.models.UserInfo;
+import com.csu.cs.week12.models.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping(path = "api/v1/user")
